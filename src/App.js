@@ -1,20 +1,24 @@
-import "./App.css";
-// import { getUsers } from "./api/users";
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-import NavBar from "./components/navbar/navBar";
 import Home from "./components/home/home";
+import NavBar from "./components/navbar/navBar";
+import LoginPage from './pages/loginPage';
 import AddPost from "./components/addPost/addPost";
 import SubRedditIndex from "./components/subRedditIndex/subRedditIndex";
 import SubRedditHome from "./components/subredditHome/subredditHome";
+import "./App.css";
 
-import LoginPage from "./pages/loginPage";
+
+
 //step 1, setup redux
 // step 2, the rest of the application
 
 function App() {
+
+
+
     const token = useSelector((state) => state.user.jwt);
     // console.log(token);
 
